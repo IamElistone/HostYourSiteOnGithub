@@ -18,50 +18,64 @@
   <body>
 
     <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Project name</h3>
+      <div class="header clearfix">	
+        <h3 class="text-muted">7 Simple Steps to host your website — for free!</h3>
       </div>
 
       <div class="jumbotron">
-        <h1 class="display-3">Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        <h1 class="display-3">GitHub Pages Tutorial</h1>
+        <p class="lead">I know you want your own website (who doesn’t?) — but how? A website is important to your personal brand but hosting a simple, straightforward website can cost around $7 per month. We can do better than that. What’s better than free?</p>
+        
+				<p class="lead">We’re going to use github.com to host our website. GitHub hosts public and private repositories for code backups and subversion control but today we’re going to tap into their “GitHub Pages” service to host a simple HTML website — for free.</p>
+
+				<p class="lead"> Disclaimers: This tutorial is moderately-easy to follow. Some familiarity of HTML required. I’m also not affiliated with GitHub — I just think it’s awesome.</p>
+        <p><a href="https://github.com/JeffreyWest/HostYourSiteOnGithub" class="btn btn-lg btn-success" href="#" role="button">Github Repo</a></p>
       </div>
 
       <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+        <div class="col-lg-12">
+          <h4>1. Download GitHub Desktop</h4>
+          <p>By far, the biggest barrier to utilizing github.com is learning how to use git — enter GitHub Desktop and fear no more! This application will interface with github.com and upload all your website files for you.
+Download the Desktop App <a href="https://desktop.github.com/">here.</a> </p>
 
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+          <h4>2. Sign up for a GitHub account</h4>
+          <p>Of course you’ll need an account with the platform. Save your username and password, you’ll need these for step 3. Sign up here: <a href="https://github.com//">here.</a>
+Github → Preferences</p>
 
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
+          <h4>3. Sign in to the GitHub Desktop App</h4>
+          <p>Navigate to Github → Preferences and sign in to your github.com account. Next, you’ll need to create a new repository. This is where we’ll store the code that will eventually make up your snazzy new website.</p>
+<p>Create a new repository by navigating to File → New Repository. Give it a name (remember this for later) and point it to a Local Path on your computer. I keep all my GitHub repositories in a subfolder in my Documents. We’ll edit the file locally (on your computer) and use the GitHub Desktop app to upload these files. Make sure to initialize this repository with a README.</p>
+<p>File → New RepositoryImportant: after you click Create Repository, don’t forget to click “Publish Repository” in the top right corner:</p>
 
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+					<h4>4. Download the appropriate HTML files</h4>
+					<p>To build a website we’ll use a sparse HTML framework to get you started, coupled with some CSS files to make it look pretty. I usually use Bootstrap, which will give us mobile functionality along with a few templates.</p>
+					
+<p>Why not use the template I’ve already created for you? Download it at my github page here. Click on the green button “Clone or Download” and download the zip file. There is an index.html file (our main website page) and a folder with a few CSS files.
+You’ll need to unzip the files and move them to the folder on your computer where you set the Local Path to your repository (see step 3). Switch back to the GitHub Desktop app. Add message, Commit, PushIn the message box type something like “First Commit” and click the blue button, “Commit to master.” Don’t forget to click “Push to repository” afterwards in the top right corner.</p>
+<p>You’ll need to do those same two actions every time you edit the files on your computer: Commit and Push. Happy pushing!</p>
+					
+					<h4>5. Create a GitHub pages branch</h4>
+					<p>From the GitHub Desktop app, navigate to Branch → New Branch and add a branch called “gh-pages” — this part is important! You must name the new branch gh-pages or this won’t work. After creating the new branch click Publish.
+Don’t blink, your website is live! Open up a web browser and navigate to “username.github.io/repositoryName” with your github.com username and repository name replaced.
+You’re welcome.</p>
+					
+					<h4>6. Buy a domain</h4>
+					<p>Yes, I know I said that this tutorial would be free. But actually, only the hosting is free. You’ll still need to buy a domain name, unless you want to be stuck with a website at username.github.io/repositoryName for the rest of your life. Don’t @ me.
+I prefer GoDaddy.com. They have cheap domain names (I bought <a href="http://hostyoursiteongithub.xyz/">http://hostyoursiteongithub.xyz/</a> for $1.99 to do this tutorial).</p>
 
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+					<p>We’ll need to change 3 records to point your new domain to our github hosted website. Click the pencil icon to edit each record.</p>
+					<p>1. Change the first record ( Type: A, Name: @ ) to point to 192.30.252.153. Leave the TTL set at 1 Hour, and click save.</p>
+					<p>2. Change the ( Type: CNAME, Name: www) record to point to username.github.io</p>
+					<p>3. Add a record ( Type: A, Name: @ ) to point to 192.30.252.154.</p>
+					
+					<h4>7. Add a CNAME file to your gh-pages account.</h4>
+					<p>We still need to let your github page know that the DNS settings on GoDaddy exist (more or less…). To do that, we’ll need to add a “CNAME” file back to our github repository. Download mine here, the same way you downloaded my previous GitHub repository in step 4 (this is a link to the gh-pages branch of my repository).
+Open this file with your favorite text editor and type the name of your website here. (Mine was <a href="http://hostyoursiteongithub.xyz/">http://hostyoursiteongithub.xyz/</a>)Go back to the GitHub Desktop app, add a message, Commit and Push.
+Now go to your GoDaddy domain (i.e. <a href="http://hostyoursiteongithub.xyz/">http://hostyoursiteongithub.xyz/</a>) and enjoy!</p>
 
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+					<h5>That's all!</h5>
+					<p>I would love to hear from you all. You can get in touch with me via my personal website (<a href="http://jeffreybwest.com/">here.</a>, also hosted on GitHub Pages!) with recommendations for new tutorials and questions about this one. Tweet @ me!</p>
+					
         </div>
       </div>
 
